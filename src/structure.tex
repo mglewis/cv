@@ -1,10 +1,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Wilson Resume/CV
-% Structure Specification File
-% Version 1.0 (22/1/2015)
+% Compiled with LuaLaTeX
 %
-% This file has been downloaded from:
-% http://www.LaTeXTemplates.com
+% Original author:
+% Howard Wilson (https://github.com/watsonbox/cv_template_2004) 
 %
 % License:
 % CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
@@ -27,7 +25,7 @@
 
 %\usepackage[proportional,scaled=1.064]{erewhon} % Use the Erewhon font
 %\usepackage[erewhon,vvarbb,bigdelims]{newtxmath} % Use the Erewhon font
-\usepackage[utf8]{inputenc} % Required for inputting international characters
+%\usepackage[utf8]{inputenc} % Required for inputting international characters
 \usepackage[T1]{fontenc} % Output font encoding for international characters
 
 \usepackage{fontspec} % Required for specification of custom fonts
@@ -72,9 +70,6 @@ SmallCapsFeatures = {Letters = SmallCaps}
 \rule{\textwidth}{0.5mm}\\ % Rule under the header
 }
 
-%{\sl \href{http://www.bristol.ac.uk}{University of Bristol}}  \hfill 2008 - 2011 \\
-%2:1 Computer Science BSc (with Hons)\\
-
 \newcommand{\university}[4]{
 \begin{tabbing}
 \hspace{2cm} \= \kill
@@ -102,21 +97,6 @@ SmallCapsFeatures = {Letters = SmallCaps}
 \end{minipage}
 \end{tabbing}
 \vspace{2mm}
-}
-
-%----------------------------------------------------------------------------------------
-%	SKILL GROUP COMMAND
-%----------------------------------------------------------------------------------------
-
-\newcommand{\skillgroup}[2]{
-\begin{tabbing}
-\hspace{5mm} \= \kill
-\sqbullet \>\+ \textbf{#1} \\
-\begin{minipage}{\smallertextwidth}
-\vspace{2mm}
-#2
-\end{minipage}
-\end{tabbing}
 }
 
 %----------------------------------------------------------------------------------------
