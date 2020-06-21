@@ -1,117 +1,165 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Compiled with LuaLaTeX
-%
-% Attribution:
-% Howard Wilson (https://github.com/watsonbox/cv_template_2004) 
-%
-% License:
-% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%-------------------------
+% Layout attribution : Sourabh Bajaj
+%------------------------
 
-%----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
+\documentclass[letterpaper,11pt]{article}
 
-\documentclass[10pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
 
-\input{structure.tex}
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
 
-%----------------------------------------------------------------------------------------
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 \begin{document}
 
-%----------------------------------------------------------------------------------------
-%	NAME AND CONTACT INFORMATION
-%----------------------------------------------------------------------------------------
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{https://github.com/mglewis}{\Large Matthew Lewis}} & \href{mailto:matthew@mglewis.co.uk}{matthew@mglewis.co.uk}\\
+  \href{http://www.mglewis.co.uk}{mglewis.co.uk} & +447909977421 \\
+\end{tabular*}
 
-\title{Matthew Lewis}
-
-%------------------------------------------------
-
-\parbox{0.5\textwidth}{
-\begin{tabbing}
-\hspace{3cm} \= \hspace{4cm} \= \kill
-{\bf Address} \> 9 Tredwell Close \\
-\> London, SW2 3JZ \\
-\end{tabbing}}
-\hfill
-\parbox{0.5\textwidth}{ 
-\begin{tabbing}
-\hspace{3cm} \= \hspace{4cm} \= \kill 
-{\bf Phone} \> (+44) 7909977421 \\ 
-{\bf Email} \> \href{mailto:matthew@mglewis.co.uk}{matthew@mglewis.co.uk} \\ % Email address
-{\bf Website} \> \href{http://www.mglewis.co.uk}{mglewis.co.uk}
-\end{tabbing}}
-
-
-%----------------------------------------------------------------------------------------
-%	PERSONAL PROFILE
-%----------------------------------------------------------------------------------------
-
-\section{Personal Profile}
-
-{\begin{itemize}
-\setlength\itemsep{-0.2em}
-\item Enthusiastic software developer and systems engineer.
-\item Experience in building and maintaining a variety of complex enterprise systems.
-\item Proponent of continuous integration and advocate of automation wherever viable.
-\item Weekly 5-a-side footballer who also is passionate about watching the game.
-\item Keen and regular boulderer, a member of the Arch Climbing Wall since 2013. 
-\item Details of personal programming projects available at \href{http://www.mglewis.co.uk}{www.mglewis.co.uk}.
-\end{itemize}
-
-%----------------------------------------------------------------------------------------
-%	EMPLOYMENT HISTORY SECTION
-%----------------------------------------------------------------------------------------
-
+%-----------EXPERIENCE-----------------
 \section{Employment History}
+  \resumeSubHeadingListStart
 
-\job
-{2015 -}
-{UBS}{https://www.ubs.com}{Authorised Officer}
-{Software Engineer and Product Owner}
-{\begin{itemize-noindent}
-\setlength\itemsep{-0.2em}
-\item Responsible for a portfolio of custom and 3rd party applications.
-\item Manager and technical lead of a team of offshore software developers.
-\item Engineered and delivered IBM Business Process Manager to the environment.
-\item Automation of various technical processes. Heavily automated release processes.
-\end{itemize-noindent}
-\textbf{Technologies:} Java, Jenkins, Linux, Git, Swift, Nexus, Shell, Oracle}
+    \resumeSubheading
+      {Football Radar}{2018 - Present}
+      {Team Lead and Manager}{}
+      \resumeItemListStart
+        \resumeItem{People management}
+          {Leadership of the Football Modelling. Management responsibilities for software developers, data scientists and system administrators.}
+        \resumeItem{Project management}
+          {Use of lightweight kanban to visualise progress at daily standups, enforce WIP limits to focus on highest priority work and encourage tight feedback loops through reviews and retrospectives.}
+        \resumeItem{Product management}
+          {Close collaboration with product managers from inception to delivery of both new and upgraded predictive football models. Coordinated bespoke solutions for a number of recent high value football tournaments (Champions League, Europa League, 2018 World Cup).} 
+        \resumeItem{Recruitment}
+          {Since 2019, responsible for organisation-wide engineering recruitment. Incremental improvements to hiring process, including review of job listings and company online presence. Final decision maker for engineering hires.}  
+        \resumeItem{System architecture}
+          {Encouraging simple solutions and adherence to company standard technologies and design patterns where possible. Pragmatic decision making about when and how to pay down technical debt. Recent work focussed on identifying which components in a legacy monolith should be decommissioned or retained.} 
+        \resumeItem{Cost controls}
+          {Realisation of significant annual AWS cost savings (£100k+) through process improvements, architectural changes, reserved instances and right-sizing.}          
+      \resumeItemListEnd            
+      
+    \resumeSubheading
+      {Football Radar}{2016 - 2018}
+      {Software Engineer}{}
+      \resumeItemListStart
+        \resumeItem{Scala development}
+          {Delivery of company strategic next generation model, predominately written in functional Scala using Akka and Finagle. Built a number of backend services, scheduled jobs, debug pages and integrations with trading systems.} 
+        \resumeItem{GPU programming}
+          {Enabled in-play football simulations by proposing and leading project to rewrite core monte-carlo simulator in C++/CUDA.  Completion of the GPU accelerated simulator enabled new trading opportunities due to lower latencies.}
+         \resumeItem{Verification and testing}
+          {Improved speed, usability and affordability of AWS based model backtesting infrastructure through simplification, increased parallelism and performance improvements uncovered using profiling tools. Outcomes included a reduction in the runtime of certain model verification jobs from c. 2 weeks to under 24 hours.}
+         \resumeItem{Production stability}
+          {Introduced prometheus monitoring and alerting to improve visibility of system faults and performance bottlenecks. Identified and resolved long standing stability issues that incurred significant opportunity cost to trading efforts during busy periods.}
+      \resumeItemListEnd
 
-\job
-{2013 - 2014}
-{UBS}{https://www.ubs.com}{Non Officer}
-{Software Engineer}
-{\begin{itemize-noindent}
-\setlength\itemsep{-0.2em}
-\item Successfully delivered a complete stack upgrade of EMC Documentum 7.1.
-\item Developed a number of high performance custom Java components.
-\item Drove team adoption of best practices: VCS, CI, Automated Testing, Release Management.
-\end{itemize-noindent}
-\textbf{Technologies:} Java, Jenkins, Linux, Solaris, Tomcat, WebSphere, Ant, Shell, Oracle}
+    \resumeSubheading
+      {UBS}{2015 - 2016}
+      {Authorised Officer}{}
+      \resumeItemListStart
+        \resumeItem{Technical leadership}
+          {Management of a team of offshore software engineers.}
+        \resumeItem{Automation}
+          {Introduced CI/CD tooling (Jenkins/Github) to improve software release process.}
+      \resumeItemListEnd
 
-\job
-{2011 - 2013}
-{UBS}{https://www.ubs.com}{Graduate Trainee}
-{Analyst}
-{\begin{itemize-noindent}
-\setlength\itemsep{-0.2em}
-\item Developed VBA and Tableau reporting systems.
-\item Designed and implemented a series of automated tools for use by remote support teams.
-\end{itemize-noindent}
-\textbf{Technologies:} VBA, Tableau, SQL, Atlassian Suite.}
+    \resumeSubheading
+      {UBS}{2013 - 2014}
+      {Non Officer}{}
+      \resumeItemListStart
+        \resumeItem{Java development}
+          {Backend programming for a variety of custom and third party applications.}
+        \resumeItem{Linux engineering}
+          {Platform engineering and system administration.}
+      \resumeItemListEnd
 
-%----------------------------------------------------------------------------------------
-%	EDUCATION SECTION
-%----------------------------------------------------------------------------------------
+    \resumeSubheading
+      {UBS}{2011 - 2013}
+      {Graduate Programme}{}
 
+  \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------------
 \section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Bristol}{2008 - 2011}
+      {2:1 Computer Science BSc (with Hons)}{}
+  \resumeSubHeadingListEnd
 
-\university
-{2008 - 2011}
-{University of Bristol}{http://www.bristol.ac.uk}
-{2:1 Computer Science BSc (with Hons)}
+%
+%--------PROGRAMMING SKILLS------------
+\section{Technologies}
+  \resumeSubHeadingListStart
+    \item{
+      \textbf{Languages}{: Scala, C++, SQL, Python}
+      \hfill
+      \textbf{Tools}{: AWS, Linux, Kafka, Terraform, Docker}
+    }
+  \resumeSubHeadingListEnd
 
+
+%-------------------------------------------
 \end{document}
