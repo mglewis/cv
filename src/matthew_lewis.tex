@@ -51,8 +51,8 @@
 \newcommand{\resumeSubheading}[4]{
   \vspace{-1pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
+      \textbf{\href{#2}{#1}} & #3 \\
+      \textit{\small#4}  \\
     \end{tabular*}\vspace{-5pt}
 }
 
@@ -84,26 +84,38 @@
   \resumeSubHeadingListStart
 
     \resumeSubheading
-      {Football Radar}{2018 - Present}
-      {Team Lead and Manager}{}
+      {Improbable Defence}{https://defence.improbable.io/}
+      {2020 - Present}{Software Engineer}
+      \resumeItemListStart
+        \resumeItem{Python development}
+          {Created a portfolio of agent-based models to aid NATO aligned organisations plan and prepare for sub-threshold warfare. Functionality included simulating civilian migration patterns, impact of infrastructure outages and the spread of misinformation.}  
+        \resumeItem{Data pipelines}
+          {Development of an extensible data pipeline using Luigi that produces a combination of synthetic and real world human geographic data. Widespread internal adoption has led to the product being commercially licensed for use by external customers.}
+        \resumeItem{Geospatial datasets}
+          {Processing and extraction of geospatial data with PostgreSQL and PostGIS. Use of GeoPandas and QGIS for analysing and visualising model outputs.}
+        \resumeItem{Model optimisation}
+          {Delivery of high performance C++ model components to meet customer requirements for large scale real-time simulations of traffic on national road networks.}
+      \resumeItemListEnd            
+
+    \resumeSubheading
+      {Football Radar}{https://www.footballradar.com/}
+      {2018 - 2020}{Engineering Manager}
       \resumeItemListStart
         \resumeItem{People management}
-          {Lead for the Football Modelling team. Management responsibilities for software developers, data scientists and system administrators.}
-        \resumeItem{Project management}
-          {Use of lightweight kanban with daily standups. Consistently encouraging the team to focus on the most beneficial and impactful work. Proponent of delivering minimal viable products and subsequently iterating. Use of reviews and retrospectives to drive continuous improvement.}
+          {Led the Football Modelling team. Managed a team of software developers, data scientists and system administrators.}
         \resumeItem{Product delivery}
-          {Close collaboration with product managers and members of the business from inception to delivery of both new and upgraded predictive football models. Coordinated bespoke solutions for recent high value football tournaments (Champions League, Europa League, 2018 World Cup).} 
-        \resumeItem{System architecture}
-          {Encouraging simple solutions, consistent technology choices and established design patterns where possible. Pragmatic decision making about when and how to pay down technical debt. Recent work focussed on identifying which components in a legacy monolith should be decommissioned or retained.} 
-		\resumeItem{Recruitment}
-          {Reviewed and improved engineering hiring processes. Hire/No hire final decision making.}  
-        \resumeItem{Cost controls}
-          {Realisation of significant annual AWS cost savings (£100k+) through process improvements, architectural changes, reserved instances and right-sizing.}          
+          {Worked with the team to deliver a variety of new and upgraded predictive football models. Bespoke solutions for high value tournaments (Champions League, 2018 World Cup).} 
+        \resumeItem{System design}
+          {Migration away from legacy monolith to new Scala services.} 
+		    \resumeItem{Project management}
+          {Managed projects using lightweight kanban. Encouraged delivering minimal viable products, with tight feedback loops and a philosophy of continous improvement.}
+        \resumeItem{Infrastructure}
+          {Cut annual AWS costs by \pounds100k+ through architectural changes, reserved instances and right-sizing.}          
       \resumeItemListEnd            
       
     \resumeSubheading
-      {Football Radar}{2016 - 2018}
-      {Software Engineer}{}
+      {Football Radar}{https://www.footballradar.com/}
+      {2016 - 2018}{Software Engineer}
       \resumeItemListStart
         \resumeItem{Scala development}
           {Delivery of company strategic next generation model, predominately written in functional Scala using Akka and Finagle. Designed and built a number of backend services, scheduled jobs, debug pages and integrations with trading systems.} 
@@ -111,33 +123,16 @@
           {Enabled in-play football simulations by proposing and leading project to rewrite core monte-carlo simulator in C++/CUDA.  Completion of the GPU accelerated simulator enabled new trading opportunities due to lower latencies.}
          \resumeItem{Verification and testing}
           {Improved speed, usability and affordability of AWS based model backtesting infrastructure through simplification, increased parallelism and performance profiling. Outcomes included a reduction in the runtime of certain model verification jobs from 2 weeks to under 24 hours.}
-         \resumeItem{Production stability}
-          {Introduced Prometheus monitoring and alerting to improve visibility of system faults and performance bottlenecks. Identified and resolved long standing stability issues that incurred significant opportunity cost to trading efforts during busy periods.}
       \resumeItemListEnd
 
     \resumeSubheading
-      {UBS}{2015 - 2016}
-      {Authorised Officer}{}
+      {UBS}{https://www.ubs.com/uk/en.html}
+      {2011 - 2016}{Software Engineer}
       \resumeItemListStart
-        \resumeItem{Technical leadership}
-          {Management of a team of offshore software engineers.}
-        \resumeItem{Automation}
-          {Introduced CI/CD tooling (Jenkins/GitHub) to improve software release process.}
-      \resumeItemListEnd
+      \resumeItem{Java development}
+        {Backend services for managing data that required long term storage.}
+    \resumeItemListEnd
 
-    \resumeSubheading
-      {UBS}{2013 - 2014}
-      {Non Officer}{}
-      \resumeItemListStart
-        \resumeItem{Java development}
-          {Backend programming for a variety of custom and third party applications.}
-        \resumeItem{Linux engineering}
-          {Platform engineering and system administration.}
-      \resumeItemListEnd
-
-    \resumeSubheading
-      {UBS}{2011 - 2013}
-      {Graduate Programme}{}
 
   \resumeSubHeadingListEnd
 
@@ -145,8 +140,8 @@
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {University of Bristol}{2008 - 2011}
-      {2:1 Computer Science BSc (with Hons)}{}
+      {University of Bristol}{https://www.bristol.ac.uk/}{2008 - 2011}
+      {2:1 Computer Science BSc (with Hons)}
   \resumeSubHeadingListEnd
 
 %
@@ -154,9 +149,9 @@
 \section{Technologies}
   \resumeSubHeadingListStart
     \item{
-      \textbf{Languages}{: Scala, C++, SQL, Python}
+      \textbf{Languages}{: Python, Scala, SQL}
       \hfill
-      \textbf{Tools}{: AWS, Linux, Kafka, Terraform, Docker}
+      \textbf{Tools}{: AWS, GCP, Linux, Docker, Kafka, Terraform}
     }
   \resumeSubHeadingListEnd
 
